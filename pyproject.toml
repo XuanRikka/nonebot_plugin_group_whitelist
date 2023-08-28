@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-general-whitelist"
-version = "1.1"
+version = "1.0"
 description = "适用于NoneBot2的群聊白名单"
 authors = [
     { name = "轩某", email = "xuan_mou@outlook.com" },
@@ -9,7 +9,7 @@ dependencies = [
     "nonebot2>=2.0.0",
     "nonebot-plugin-localstore>=0.5.0",
 ]
-requires-python = ">=1.8"
+requires-python = ">=3.8"
 license = { text = "MIT" }
 readme = "README.md"
 
