@@ -15,6 +15,16 @@ driver = get_driver()
 global_config = driver.config
 config = Config.parse_obj(global_config)
 
+__plugin_meta__ = PluginMetadata(
+    name="nonebot_plugin_general_whitelist",
+    description="简易群聊白名单",
+    usage="/whitelist.add <群号> 添加白名单\n"
+          "/whitelist.remove <群号> 移除白名单\n"
+          "/whitelist.lookup 列出白名单",
+    type="application",
+    homepage="https://github.com/Rikka-desu/nonebot_plugin_general_whitelist"
+)
+
 
 async def whitelist_block_rule(event: Event):
     if (session := event.get_session_id()).startswith("group_"):
@@ -79,12 +89,3 @@ async def whitelist_lookup_handle():
     await whitelist_lookup.finish(f"全部白名单为：\n{msg}".strip())
 
 
-__plugin_meta__ = PluginMetadata(
-    name="nonebot_plugin_general_whitelist",
-    description="简易群聊白名单",
-    usage="/whitelist.add <群号> 添加白名单\n"
-          "/whitelist.remove <群号> 移除白名单\n"
-          "/whitelist.lookup 列出白名单",
-    type="application",
-    homepage="https://github.com/Rikka-desu/nonebot_plugin_general_whitelist"
-)
