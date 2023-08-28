@@ -1,15 +1,21 @@
 [project]
 name = "nonebot-plugin-general-whitelist"
 version = "1.0"
-description = "一个通用数据库连接插件"
-authors = [{ name = "轩某", email = "xuan_mou@outlook.com" }]
+description = "适用于NoneBot2的群聊白名单"
+authors = [
+    { name = "轩某", email = "xuan_mou@outlook.com" },
+    {name = "Rikka-desu", email = "2273379351@qq.com"},
+]
 dependencies = [
     "nonebot2>=2.0.0",
-    "nonebot-plugin-localstore>=0.5.0"
+    "nonebot-plugin-localstore>=0.5.0",
 ]
-requires-python = ">=3.8"
+requires-python = ">=1.8"
 license = { text = "MIT" }
 readme = "README.md"
 
 [project.urls]
 homepage = "https://github.com/Rikka-desu/nonebot_plugin_general_whitelist"
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
