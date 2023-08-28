@@ -19,7 +19,7 @@ config = Config.parse_obj(global_config)
 async def whitelist_block_rule(event: Event):
     if (session := event.get_session_id()).startswith("group_"):
         group_id = session.split("_")[1]
-        return not group_id in global_config.whitelist
+        return group_id not in global_config.whitelist
     return True
 
 
@@ -64,7 +64,7 @@ async def whitelist_remove_handle(args: Message = CommandArg()):
     group_id: str = args.extract_plain_text().strip()
     if not group_id.isdigit():
         await whitelist_remove.finish("群输入号必须是纯数字")
-    if not group_id in global_config.whitelist:
+    if group_id not in global_config.whitelist:
         await whitelist_remove.finish("白名单里没有这个群")
     global_config.whitelist.remove(group_id)
     await save_whitelist()
