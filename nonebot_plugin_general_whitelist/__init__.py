@@ -86,6 +86,5 @@ __plugin_meta__ = PluginMetadata(
           "/whitelist.remove <群号> 移除白名单\n"
           "/whitelist.lookup 列出白名单",
     type="application",
-    homepage="https://github.com/Rikka-desu/nonebot_plugin_general_whitelist",
-    config=Config,
+    homepage="https://github.com/Rikka-desu/nonebot_plugin_general_whitelist"
 )
