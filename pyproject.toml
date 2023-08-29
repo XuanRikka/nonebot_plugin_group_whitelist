@@ -1,5 +1,5 @@
 [project]
-name = "nonebot-plugin-general-whitelist"
+name = "nonebot-plugin-group-whitelist"
 version = "1.0"
 description = "适用于NoneBot2的群聊白名单"
 authors = [
@@ -14,7 +14,7 @@ license = { text = "MIT" }
 readme = "README.md"
 
 [project.urls]
-homepage = "https://github.com/Rikka-desu/nonebot_plugin_general_whitelist"
+homepage = "https://github.com/Rikka-desu/nonebot_plugin_group_whitelist"
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
