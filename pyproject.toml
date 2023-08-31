@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-group-whitelist"
-version = "0.7.0"
+version = "0.8.0"
 description = "适用于NoneBot2的群聊白名单"
 authors = [
     { name = "轩某", email = "xuan_mou@outlook.com" },
