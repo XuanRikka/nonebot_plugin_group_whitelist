@@ -3,7 +3,7 @@ from nonebot import get_driver
 from nonebot import CommandGroup, on_message
 from nonebot import logger
 from nonebot.params import CommandArg
-from nonebot.adapters import Message, Event
+from nonebot.adapters.onebot.v11 import Message, Event
 from nonebot.permission import SUPERUSER
 
 from .config import Config
@@ -22,11 +22,13 @@ __plugin_meta__ = PluginMetadata(
           "/whitelist.remove <群号> 移除白名单\n"
           "/whitelist.lookup 列出白名单",
     type="application",
-    homepage="https://github.com/Rikka-desu/nonebot_plugin_general_whitelist"
+    homepage="https://github.com/Rikka-desu/nonebot_plugin_group_whitelist",
+    config=Config,
+    supported_adapters={"~onebot.v11"},
 )
 
 
-async def whitelist_block_rule(event: Event):
+async def whitelist_block_rule(event: Event):   # 判断是否不在白名单中
     if (session := event.get_session_id()).startswith("group_"):
         group_id = session.split("_")[1]
         return group_id not in global_config.whitelist
